@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casa de Câmbio Ichinuan</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <header>
-    <h1>Casa de Câmbio</h1>
+    <h1>Money Exchange</h1>
   </header>
 
   <main class="main-section">
     <div>
-      <label for="currency-input">Digite a moeda:</label>
+      <label for="currency-input">Choose currency:</label>
       <input type="text" placeholder="EUR" name="currency" id="currency-input">
     </div>
     
-    <button id="search-button">Pesquisar</button>
+    <button id="search-button">Search</button>
+    <button id="clear-button">Clear</button>
     <ul id="currency-list"></ul>
     <span id="currency-current-date"></span>
   </main>
   
   
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

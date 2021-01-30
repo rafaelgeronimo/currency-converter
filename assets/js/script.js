@@ -45,7 +45,6 @@ const fetchCurrencyAsyncAwait = async (currency) => {
     if (object.error) {
       throw new Error(object.error);
     }
-
     handleRates(object);
   } catch (error) {
     window.alert(error);
@@ -71,6 +70,8 @@ const handleSearchEvent = () => {
 const setupEvents = () => {
   const searchButton = document.querySelector('#search-button');
   searchButton.addEventListener('click', handleSearchEvent);
+  const clearButton = document.querySelector('#clear-button');
+  clearButton.addEventListener('click', clearList);
 }
 
 window.onload = () => {
