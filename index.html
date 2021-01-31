@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currency Converter</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -14,37 +13,46 @@
   </header>
 
   <main class="main-section">
-    <!-- <div>
-      <label for="currency-input">Choose currencies:</label>
-      <input type="text" placeholder="EUR" name="currency" id="currency-input">
-    </div> -->
-
+    <!-- Transfer Operation Section -->
+    <div class="operation">
+      <h2>Transfer Operation</h2>
+      <div class="flags">
+        <img src="https://countryflags.io/eu/flat/64.png" alt="">
+        <i class="fi-xwlrxl-arrow-simple-wide"></i>
+        <img src="https://countryflags.io/us/flat/64.png" alt="">
+      </div>
+    </div>
+    <!-- Currency Selection Section-->
     <div class="select">
+      <!-- Sell Select -->
       <label for="sell-currency">
         Sell:
-        <select name="currencies" id="sell-currency" required>
-          <option value="" selected disabled hidden="selected">Select</option>
-          <option value="">EUR</option>
+        <select name="currencies" class="sell-currency" required>
+          <option value="" selected>EUR</option>
           <option value="">USD</option>
         </select>
       </label>
+      <!-- Buy Select -->
       <label for="buy-currency">
         Buy:
-        <select name="currencies" id="buy-currency">
-          <option value="" selected disabled hidden="selected">Select</option>
+        <select name="currencies" class="buy-currency">
           <option value="">EUR</option>
-          <option value="">USD</option>
+          <option value="" selected>USD</option>
         </select>
       </label>
+      <div class="results">
+        <span>€225.00</span>
+        <i class="fi-xwluxl-change-wide"></i>
+        <span>$200.00</span>
+      </div>
     </div>
-    
-    <button id="search-button">Convert</button>
-    <!-- <button id="clear-button">Clear</button> -->
-    <ul id="currency-list"></ul>
-    <span id="currency-current-date"></span>
+    <!-- Convert Button -->
+    <button class="convert-button" id="search-button">Convert <i class="fi-xnsuxl-dot-currency"></i></button>
+    <!-- <ul id="currency-list"></ul>
+    <span id="currency-current-date"></span> -->
   </main>
   
-  
-  <script src="assets/js/script.js"></script>
+  <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+  <script type="module" src="assets/js/script.js"></script>
 </body>
 </html>

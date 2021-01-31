@@ -1,127 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap");
 :root {
-  --primary: #0fa36b;
-  --secondary: #222;
-  --bg-color: #fff;
-  --font-primary: #f5f5f5;
-  --font-secondary: #aaa;
+    --primary: #1BA8FF;
+    --secondary: #C0C0C0;
+    --bg-color: linear-gradient(to right, #2E81FF, #08CCFF);
+    --font-primary: #fff;
+    --font-secondary: #666;
+    --button: #3EC487;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: var(--bg-color);
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: column nowrap;
-  margin-top: 2rem;
-}
-section {
-  max-width: 450px;
-  width: 100%;
+header {
+    align-items: center;
+    background-image: var(--bg-color);
+    color: var(--font-primary);
+    display: flex;
+    height: 25vh;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-h1 {
-  font-family: "Satisfy", cursive;
-  color: var(--primary);
-  font-size: 64px;
+.main-section {
+    display: flex;
+    flex-direction: column;
+    
 }
-label {
-  color: var(--font-secondary);
+
+.operation, .select {
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px var(--secondary);
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    margin: 15px 10px;
+}
+
+.operation h2 {
+    color: var(--font-secondary);
+    text-transform: uppercase;
+}
+
+.flags {
+    align-items: center;
+    display: flex;
+    flex-grow: 0.2;
+    justify-content: space-around;
+}
+
+.flags img {
+    border-radius: 15%;
 }
 
 .select {
-  display: flex;
-  height: 80px;
+    padding: 25px 0;
 }
 
-.select label {
-  height: 200px;
-  margin: 10px;
-  padding-bottom: 20px;
+.sell-currency, .buy-currency {
+    border: 0px;
+    padding: 10px;
 }
 
-/* input[type="text"] {
-  padding: 0.5rem;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--secondary);
-  color: var(--font-primary);
-  max-width: 450px;
-  width: 100%;
-} */
-button {
-  margin: 1rem 0;
-  outline: none;
-  font-size: 16px;
-  position: relative;
-  display: inline-block;
-  padding: 0.6rem 2em;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  background-color: var(--primary);
-  color: #fff;
-  box-shadow: none;
-  border-radius: 5px;
-  border: none;
-  transition: all 0.2s ease-in-out;
-}
-button:focus,
-button:hover {
-  outline: none;
-  transform: translate(0px, -5px);
-}
-
-ul {
-  max-width: 550px;
-  width: 100%;
-  max-height: 600px;
-  overflow-y: scroll;
-  font-family: "Turret Road", cursive;
-}
-
-ul li {
-  font-size: 24px;
-  padding: 0.5rem 1rem;
-  color: var(--primary);
-}
-ul li b {
-  background-color: transparent;
-  color: var(--font-primary);
-  font-family: "Turret Road", cursive;
-}
-
-ul li:nth-child(odd) {
-  background-color: var(--secondary);
-}
-
-::-webkit-scrollbar {
-  background-color: transparent;
-}
-::-webkit-scrollbar-button {
-  background-color: transparent;
-}
-::-webkit-scrollbar-track {
-  background-color: var(--secondary);
-}
-::-webkit-scrollbar-track-piece {
-  background-color: var(--font-primary);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
-  border-radius: 10px;
+.convert-button {
+    background-color: var(--button);
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    color: var(--font-primary);
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 20px 10px;
+    text-transform: uppercase;
+    width: 250px;
 }

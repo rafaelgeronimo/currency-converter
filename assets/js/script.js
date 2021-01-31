@@ -1,3 +1,6 @@
+/* import { currencies } from "./data.js"; */
+/* const currencies = require('./data'); */
+
 const handleRates = (ratesData) => {
   const currencyList = document.querySelector('#currency-list');
 
@@ -69,18 +72,24 @@ const handleSearchEvent = () => {
   fetchCurrencyAsyncAwait(currency);
 }
 
-const currencyList = document.querySelector('#sell-currency');
+/* const currency = currencies.forEach((actual) => {
+  return actual;
+}) */
+
 
 
 const setupEvents = () => {
-  const select
-
+  /* const select */
+  
   const searchButton = document.querySelector('#search-button');
   searchButton.addEventListener('click', handleSearchEvent);
-  const clearButton = document.querySelector('#clear-button');
-  clearButton.addEventListener('click', clearList);
+  /* const clearButton = document.querySelector('#clear-button');
+  clearButton.addEventListener('click', clearList); */
 }
 
 window.onload = () => {
+  
+  const currencyList = document.querySelector('#sell-currency');
   setupEvents();
+  // console.log(currencies);
 }
