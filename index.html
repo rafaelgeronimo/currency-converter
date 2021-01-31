@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currency Converter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,13 +14,32 @@
   </header>
 
   <main class="main-section">
-    <div>
-      <label for="currency-input">Choose currency:</label>
+    <!-- <div>
+      <label for="currency-input">Choose currencies:</label>
       <input type="text" placeholder="EUR" name="currency" id="currency-input">
+    </div> -->
+
+    <div class="select">
+      <label for="sell-currency">
+        Sell:
+        <select name="currencies" id="sell-currency" required>
+          <option value="" selected disabled hidden="selected">Select</option>
+          <option value="">EUR</option>
+          <option value="">USD</option>
+        </select>
+      </label>
+      <label for="buy-currency">
+        Buy:
+        <select name="currencies" id="buy-currency">
+          <option value="" selected disabled hidden="selected">Select</option>
+          <option value="">EUR</option>
+          <option value="">USD</option>
+        </select>
+      </label>
     </div>
     
-    <button id="search-button">Search</button>
-    <button id="clear-button">Clear</button>
+    <button id="search-button">Convert</button>
+    <!-- <button id="clear-button">Clear</button> -->
     <ul id="currency-list"></ul>
     <span id="currency-current-date"></span>
   </main>

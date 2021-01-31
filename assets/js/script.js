@@ -36,7 +36,9 @@ const fetchCurrencyAsyncAwait = async (currency) => {
   // SE eu vou usar await dentro de uma função, então
   // a assinatura da função TEM QUE TER a palavra async
 
-  const endpoint = `https://api.ratesapi.io/api/latest?base=${currency}`;
+  //const endpoint = `https://api.ratesapi.io/api/latest?base=${currency}`;
+  const endpoint = `https://api.ratesapi.io/api/latest?base=${sell_currency}&symbols=${buy_currency}`;
+  
 
   try {
     const response = await fetch(endpoint);
@@ -53,10 +55,10 @@ const fetchCurrencyAsyncAwait = async (currency) => {
   
 }
 
-const clearList = () => {
+/* const clearList = () => {
   const currencyList = document.querySelector('#currency-list');
   currencyList.innerHTML = '';
-}
+} */
 
 const handleSearchEvent = () => {
   const searchInput = document.querySelector('#currency-input');
@@ -67,7 +69,12 @@ const handleSearchEvent = () => {
   fetchCurrencyAsyncAwait(currency);
 }
 
+const currencyList = document.querySelector('#sell-currency');
+
+
 const setupEvents = () => {
+  const select
+
   const searchButton = document.querySelector('#search-button');
   searchButton.addEventListener('click', handleSearchEvent);
   const clearButton = document.querySelector('#clear-button');
